@@ -1,0 +1,11 @@
+.readonlyFields {
+  pointer-events: none;
+}
+
+button:disabled {
+  background-color: grey;
+}
+
+.dialogActions {
+  justify-content: space-between;
+}

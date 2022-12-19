@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Prova</h2>
+
+<mat-dialog-content [formGroup]="form" style="display: grid; width: 600px;">
+
+  <mat-form-field class="readonlyFields">
+    <input #id matInput placeholder="ID" readonly formControlName="id">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input #location matInput placeholder="Location" formControlName="location">
+  </mat-form-field>
+
+  <mat-form-field class="readonlyFields">
+    <input #week matInput placeholder="Week" formControlName="week" readonly>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input #author matInput placeholder="Author" formControlName="author">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="readonlyFields">
+    <mat-label>Text</mat-label>
+    <textarea matInput formControlName="text" readonly></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions class="dialogActions">
+  <button class="mat-raised-button" (click)="close()">Close</button>
+  <button class="mat-raised-button mat-primary" type="submit" (click)="save()" [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>
